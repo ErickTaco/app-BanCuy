@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.Agua" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="flecha" x:Name="btnRegresar" HeightRequest="20" HorizontalOptions="Start" BackgroundColor="White" Margin="20"/>
+                <Image x:Name="icono" Source="logoBank"  WidthRequest="190" HorizontalOptions="CenterAndExpand" Margin="-80,20,0,0"/>
+            </StackLayout>
+
+            <Label Text="Completa el formulario para pagar el Servicio de Agua-Potable" TextColor="#542B21" Margin="50" FontSize="14" FontFamily="{StaticResource Hack-Regular}" HorizontalTextAlignment="Center"/>
+
+            <Label Text="*No. Suministro:" Margin="0,10" TextColor="#542B21"  FontSize="14" FontFamily="{StaticResource Hack-Regular}" HorizontalTextAlignment="Center"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                <Frame HeightRequest="40" WidthRequest="250"
+                        BackgroundColor="#E8F3FF" Padding="5"
+                  HasShadow="True" CornerRadius="10" >
+                    <Entry x:Name="txtSuministro" FontSize="12"/>
+                </Frame>
+            </StackLayout>
+
+            <Label Text="*Descripción:" Margin="0,10" TextColor="#542B21"  FontSize="14" FontFamily="{StaticResource Hack-Regular}" HorizontalTextAlignment="Center"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                <Frame HeightRequest="40" WidthRequest="250"
+                        BackgroundColor="#E8F3FF" Padding="5"
+                  HasShadow="True" CornerRadius="10" >
+                    <Entry x:Name="txtDescripcion" FontSize="12"/>
+                </Frame>
+            </StackLayout>
+            <Button x:Name="btnContinuar" Clicked="btnContinuar_Clicked" Margin="120,30" Text="Continuar" HeightRequest="50"
+                        FontAttributes="Bold" CornerRadius="30" BackgroundColor="#FFCB69" TextTransform="None"
+                        TextColor="#1D4E89 " FontFamily="{StaticResource Hack-Bold}"   FontSize="13"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

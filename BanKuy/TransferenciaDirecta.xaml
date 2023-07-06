@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.TransferenciaDirecta" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="flecha" x:Name="btnRegresar" HeightRequest="20" HorizontalOptions="Start" BackgroundColor="White" Margin="20"/>
+                <Image x:Name="icono" Source="logoBank"  WidthRequest="190" HorizontalOptions="CenterAndExpand" Margin="-80,20,0,0"/>
+            </StackLayout>
+
+            <Label Text="Transferencia Directa" TextColor="#1D4E89" FontSize="25" Margin="10" HorizontalTextAlignment="Center" FontFamily="{StaticResource BodoniXT}"/>
+
+            <Label Text="Su id de Cuenta" x:Name="idcuenta" TextColor="Black" FontSize="20" FontAttributes="Bold" Margin="10" HorizontalTextAlignment="Center"/>
+
+            <Label Text="Ingrese el monto a transferir: " TextColor="#542B21" Margin="15" FontSize="14" FontFamily="{StaticResource Hack-Regular}"/>
+            <StackLayout>
+                <Frame HeightRequest="50" WidthRequest="180"
+                       Padding="10"
+                  HasShadow="False" Margin="5" CornerRadius="10"
+                 HorizontalOptions="CenterAndExpand">
+                    <Entry x:Name="txtMonto" FontSize="20" Placeholder="0.0" Keyboard="Numeric" HorizontalTextAlignment="Center"/>
+                </Frame>
+            </StackLayout>
+
+            <Label Text="No. de cuenta: " TextColor="#542B21" Margin="15" FontSize="14" FontFamily="{StaticResource Hack-Regular}"/>
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="CenterAndExpand" >
+
+                <StackLayout>
+                    <Frame HeightRequest="40" WidthRequest="180"
+                        BackgroundColor="#E8F3FF" Padding="10"
+                  HasShadow="True" Margin="20,0" CornerRadius="10"
+                 HorizontalOptions="CenterAndExpand">
+                        <Entry x:Name="txtNcuenta" FontSize="12" />
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout>
+                    <Frame HeightRequest="40" WidthRequest="180" Padding="10"
+                  HasShadow="False" Margin="20,0" CornerRadius="10"
+                 HorizontalOptions="CenterAndExpand">
+                        <Button x:Name="btnValidar" Text="Validar" Clicked="btnValidar_Clicked" BackgroundColor="#FFCB69" TextColor="#1D4E89"   
+                            FontSize="13" CornerRadius="15" TextTransform="None" FontFamily="{StaticResource Hack-Bold}"/>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+            
+            <StackLayout>
+                <Frame HeightRequest="60" WidthRequest="400"  BackgroundColor="#E8F3FF" Padding="10" HasShadow="True" Margin="20,10" CornerRadius="10"
+                    HorizontalOptions="CenterAndExpand">
+                    <StackLayout>
+                        <Label Text="Esta cuenta pertenece a:" Margin="15,0" FontSize="14" TextColor="Black"></Label>
+                        <Label Text="Karina Loor Pineda" FontAttributes="Bold" Margin="15,0" x:Name="cuentaVerificada" FontSize="17" TextColor="Black"></Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout>
+                <Frame HeightRequest="20" WidthRequest="400"  BackgroundColor="#E8F3FF" Padding="10" HasShadow="True" Margin="20,10" CornerRadius="10"
+                    HorizontalOptions="CenterAndExpand" BorderColor="#1D4E89">
+                    <StackLayout>
+                        <Label Text="! Esta transaccion no tiene costo !" Margin="15,0" FontSize="14" TextColor="Black"></Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <Button x:Name="btnContinuar" IsEnabled="False" Text="Continuar" Clicked="btnContinuar_Clicked" Margin="120,10" HeightRequest="50" 
+                        CornerRadius="30" BackgroundColor="#FFCB69" TextColor="#1D4E89"   
+                        FontSize="13" TextTransform="None" FontFamily="{StaticResource Hack-Bold}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

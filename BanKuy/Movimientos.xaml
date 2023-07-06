@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.Movimientos"
+              NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="flecha" x:Name="btnRegresar" HeightRequest="20" HorizontalOptions="Start" BackgroundColor="White" Margin="20"/>
+                <Image x:Name="icono" Source="logoBank"  WidthRequest="190" HorizontalOptions="CenterAndExpand" Margin="-80,20,0,0"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                <Frame HeightRequest="220" WidthRequest="420"  BackgroundColor="#E8F3FF" Padding="10" Margin="20,10" CornerRadius="10"
+                    HorizontalOptions="CenterAndExpand">
+                    <StackLayout>
+                        <Label Text="Cuenta de Ahorros" Margin="15,0" FontSize="14" TextColor="Black" FontFamily="{StaticResource Hack-Regular}"></Label>
+                        <Label Text="Karina Loor " Margin="15,0" FontSize="18" x:Name="nombreCliente" TextColor="Black" FontFamily="{StaticResource Hack-Bold}"></Label>
+                        <Label Text=" 58" x:Name="idCuenta" Margin="15,0" FontSize="14" TextColor="Black" FontFamily="{StaticResource Hack-Regular}"></Label>
+                        <Label HorizontalOptions="EndAndExpand" Text="Saldo Disponible" Margin="10,0" FontSize="14" Padding="2" TextColor="Black" FontFamily="{StaticResource Hack-Regular}"></Label>
+                        <Label HorizontalOptions="EndAndExpand" Text=" " x:Name="monto" FontAttributes="Bold" Margin="15,0" FontSize="18" TextColor="Black" FontFamily="{StaticResource Hack-Bold}"></Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Movimientos" x:Name="ds" TextColor="#542B21" FontSize="20" FontAttributes="Bold" Margin="20" FontFamily="{StaticResource Hack-Bold}" HorizontalOptions="CenterAndExpand"/>
+                
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button Text="Entradas" Clicked="Button_Clicked" BackgroundColor="#FFCB69" TextColor="#1D4E89" Margin="10,15"  
+                            FontSize="13" CornerRadius="5" TextTransform="None" FontFamily="{StaticResource Hack-Bold}"></Button>
+                <Button Text="Salidas" Clicked="Button_Clicked_1" BackgroundColor="#FFCB69" TextColor="#1D4E89" Margin="0,15"  
+                            FontSize="13" CornerRadius="5" TextTransform="None" FontFamily="{StaticResource Hack-Bold}"></Button>
+                <Button Text="Servicios Basicos" BackgroundColor="#FFCB69" TextColor="#1D4E89" Margin="10,15"  
+                            FontSize="13" CornerRadius="5" TextTransform="None" FontFamily="{StaticResource Hack-Bold}"></Button>
+                
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
+                <Label Text="ID " TextColor="#542B21" Margin="-30,5,0,-20" FontSize="12" FontFamily="{StaticResource Hack-Bold}"></Label>
+                <Label Text="Origen" TextColor="#542B21" Margin="10,5,0,-20" FontSize="12" FontFamily="{StaticResource Hack-Bold}"></Label>
+                <Label Text="Destino" TextColor="#542B21" Margin="10,5,0,-20" FontSize="12" FontFamily="{StaticResource Hack-Bold}" ></Label>
+                <Label Text="Monto" TextColor="#542B21" Margin="10,5,0,-20" FontSize="12" FontFamily="{StaticResource Hack-Bold}"></Label>
+                <Label Text="Fecha" TextColor="#542B21" Margin="30,5,0,-20" FontSize="12" FontFamily="{StaticResource Hack-Bold}"></Label>
+            </StackLayout>
+            
+            <ListView x:Name="lstLiatadoEstudiantes" SelectionMode="Single" Margin="30" >
+                <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <ViewCell>
+                            <StackLayout >
+                                <Grid MinimumHeightRequest="80" BackgroundColor="#E8F3FF">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="5*"></RowDefinition>
+                                        <RowDefinition Height="2*"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*" ></ColumnDefinition>
+                                        <ColumnDefinition  Width="1*"></ColumnDefinition>
+                                        <ColumnDefinition  Width="1*"></ColumnDefinition>
+                                        <ColumnDefinition  Width="1*"></ColumnDefinition>
+                                        <ColumnDefinition  Width="2*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    
+                                    <Label Text="{Binding idTransaccion}" TextColor="Black" FontSize="14" Grid.Column="0" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                                    <Label Text="{Binding idCuentaOrigen}" TextColor="Black" FontSize="14" Grid.Column="1" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                                    <Label Text="{Binding idCuentaDestino}" TextColor="Black" FontSize="14" Grid.Column="2" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                                    <Label Text="{Binding monto}"  FontSize="14" TextColor="Black" Grid.Column="3" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                                    <Label Text="{Binding fechaTransaccion}" FontSize="14" TextColor="Black" Grid.Column="4" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+
+                                </Grid>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

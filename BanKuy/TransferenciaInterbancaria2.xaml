@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.TransferenciaInterbancaria2" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="flecha" x:Name="btnRegresar"  HeightRequest="20" HorizontalOptions="Start" BackgroundColor="White" Margin="20"/>
+                <Image x:Name="icono" Source="logoBank"  WidthRequest="190" HorizontalOptions="CenterAndExpand" Margin="-80,20,0,0"/>
+            </StackLayout>
+
+            <Label Text="" x:Name="nombrBanco" TextColor="#1D4E89" FontSize="25" Margin="10" HorizontalTextAlignment="Center" FontFamily="{StaticResource BodoniXT}"/>
+
+            <Label Text="Ingrese el monto a transferir: " TextColor="#542B21" Margin="20" FontSize="14" FontFamily="{StaticResource Hack-Regular}"/>
+            <StackLayout>
+                <Frame HeightRequest="50" WidthRequest="180"
+                       Padding="10"
+                  HasShadow="False" Margin="5" CornerRadius="10"
+                 HorizontalOptions="CenterAndExpand">
+                    <Entry x:Name="txtMonto" FontSize="20" Placeholder="0.0" HorizontalTextAlignment="Center"/>
+                </Frame>
+            </StackLayout>
+
+            <Label Text="No. de Cuenta: " TextColor="#542B21" Margin="15" FontSize="14" FontFamily="{StaticResource Hack-Regular}"/>
+            <Label Text="Cédula: " TextColor="#542B21" HorizontalOptions="EndAndExpand" Margin="0,-45,110,0" FontSize="14" FontFamily="{StaticResource Hack-Regular}"/>
+            <StackLayout Orientation="Horizontal"   >
+                <StackLayout>
+                    <Frame HeightRequest="40" WidthRequest="180"
+                        BackgroundColor="#E8F3FF" Padding="5"
+                  HasShadow="True" Margin="20,0,0,0"  CornerRadius="10"
+                 HorizontalOptions="CenterAndExpand">
+                        <Entry x:Name="txtNcuenta" FontSize="10"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout>
+                    <Frame HeightRequest="40" WidthRequest="180"
+                        BackgroundColor="#E8F3FF" Padding="5"
+                  HasShadow="True" Margin="40,0" CornerRadius="10"
+                 HorizontalOptions="EndAndExpand">
+                        <Entry x:Name="txtCedulaCliente" FontSize="12"/>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+
+            <Label Text="Nombre y Apellido: " TextColor="#542B21" Margin="15" FontSize="14" FontFamily="{StaticResource Hack-Regular}"/>
+            <StackLayout Orientation="Horizontal"  >
+                <StackLayout>
+                    <Frame HeightRequest="40" WidthRequest="415"
+                        BackgroundColor="#E8F3FF" Padding="5"
+                  HasShadow="True" Margin="20,-10" CornerRadius="10"
+                 HorizontalOptions="StartAndExpand">
+                        <Entry x:Name="txtNombreCliente" FontSize="12"/>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout>
+                <Frame HeightRequest="20" WidthRequest="400"  BackgroundColor="#E8F3FF" Padding="10" HasShadow="True" Margin="20,40,20,20" CornerRadius="10"
+                    HorizontalOptions="CenterAndExpand" BorderColor="#1D4E89">
+                    <StackLayout>
+                        <Label Text="! Esta transaccion tiene un costo de 0.50 centavos !"  FontSize="14" TextColor="#542B21" ></Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout>
+                <Frame HeightRequest="40" WidthRequest="400"  BackgroundColor="#E8F3FF" Padding="10" HasShadow="True" Margin="20,5" CornerRadius="10"
+                    HorizontalOptions="CenterAndExpand" BorderColor="#1D4E89">
+                    <StackLayout>
+                        <Label Text="! Aquí no existe verificación de datos. Asegúrate que sean correctos !" HorizontalTextAlignment="Center" FontSize="14" TextColor="#542B21" ></Label>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <Button x:Name="btnContinuar" Clicked="btnContinuar_Clicked" Text="Continuar" Margin="120,10" HeightRequest="50" 
+                        CornerRadius="30" BackgroundColor="#FFCB69" TextColor="#1D4E89"   
+                        FontSize="13" TextTransform="None" FontFamily="{StaticResource Hack-Bold}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

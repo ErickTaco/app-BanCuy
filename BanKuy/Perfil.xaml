@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.Perfil" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="flecha" x:Name="btnRegresar" Clicked="btnRegresar_Clicked" HeightRequest="20" HorizontalOptions="Start" BackgroundColor="White" Margin="20"/>
+                <Image x:Name="icono" Source="logoBank"  WidthRequest="190" HorizontalOptions="CenterAndExpand" Margin="-80,20,0,0"/>
+            </StackLayout>
+
+            <Label Text="Perfil" TextColor="#1D4E89" FontSize="25" Margin="10" HorizontalTextAlignment="Center" FontFamily="{StaticResource BodoniXT}"/>
+
+            <Frame HeightRequest="60" WidthRequest="350"  BackgroundColor="#E8F3FF" Padding="10" Margin="10" CornerRadius="10"
+                    HorizontalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Image Source="cedula" WidthRequest="85" HorizontalOptions="Start" Margin="10,0"/>
+                    <Label Text="Cédula"  Margin="0,-60" FontSize="14" TextColor="#1D4E89"  
+                           HorizontalOptions="CenterAndExpand" FontFamily="{StaticResource Hack-Bold}"></Label>
+                    <Label x:Name="cedula" HorizontalOptions="CenterAndExpand" FontFamily="{StaticResource Hack-Regular}" Margin="10,55"  FontSize="14" TextColor="#542B21"></Label>
+                </StackLayout>
+            </Frame>
+            
+            <Frame HeightRequest="60" WidthRequest="350"  BackgroundColor="#E8F3FF" Padding="10"  Margin="10" CornerRadius="10"
+                    HorizontalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Image Source="perfil" WidthRequest="60" HorizontalOptions="Start" Margin="10,0"/>
+                    <Label Text="Nombre Completo" Margin="0,-60" FontSize="14" TextColor="#1D4E89"  
+                           HorizontalOptions="CenterAndExpand" FontFamily="{StaticResource Hack-Bold}"></Label>
+                    <Label Text="Karina Loor Diaz" x:Name="Nombre" HorizontalOptions="CenterAndExpand" FontFamily="{StaticResource Hack-Regular}" Margin="10,55"  FontSize="14" TextColor="#542B21"></Label>
+                </StackLayout>
+            </Frame>
+
+            <Frame HeightRequest="60" WidthRequest="350"  BackgroundColor="#E8F3FF" Padding="10" Margin="10" CornerRadius="10"
+                    HorizontalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Image Source="telefono" WidthRequest="60" HorizontalOptions="Start" Margin="10,0"/>
+                    <Label Text="Celular" FontFamily="{StaticResource Hack-Bold}" Margin="0,-60" FontSize="14" TextColor="#1D4E89" HorizontalOptions="CenterAndExpand"></Label>
+                    <Label Text="0986358641" x:Name="Celular" HorizontalOptions="CenterAndExpand" FontFamily="{StaticResource Hack-Regular}" Margin="10,55" FontSize="14" TextColor="#542B21"></Label>
+                </StackLayout>
+            </Frame>
+
+            <Frame HeightRequest="60" WidthRequest="350"  BackgroundColor="#E8F3FF" Padding="10" HasShadow="False" Margin="10" CornerRadius="10"
+                    HorizontalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Image Source="correo" WidthRequest="70" HorizontalOptions="Start" Margin="10,-5"/>
+                    <Label Text="Correo" FontFamily="{StaticResource Hack-Bold}" Margin="0,-60" FontSize="14" TextColor="#1D4E89" HorizontalOptions="CenterAndExpand"></Label>
+                    <Label x:Name="correo" FontSize="12" HorizontalOptions="EndAndExpand" FontFamily="{StaticResource Hack-Regular}" Margin="10,55" TextColor="#542B21"></Label>
+                </StackLayout>
+            </Frame>
+
+            <Button x:Name="btnActualizar" Clicked="btnActualizar_Clicked" Text="Actualizar información" HeightRequest="50" BackgroundColor="#FFCB69" TextTransform="None"
+                        TextColor="#1D4E89" FontFamily="{StaticResource Hack-Bold}" CornerRadius="30" Margin="90,30,90,0" FontSize="13"></Button>
+            <Label Text="Nota: Recuerda que únicamente puedes actualizar tu teléfono y correo. " 
+                   FontFamily="{StaticResource Hack-Bold}" Margin="50" HorizontalTextAlignment="Center" TextColor="#542B21" FontSize="13"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

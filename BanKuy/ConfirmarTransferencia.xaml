@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.ConfirmarTransferencia" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image x:Name="icono" Source="logoBank"  WidthRequest="190" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0"/>
+            </StackLayout>
+
+            <Label Text="Confirma los datos de la transferencia" TextColor="#1D4E89" FontSize="25" Margin="50,20" HorizontalTextAlignment="Center" FontFamily="{StaticResource BodoniXT}"/>
+
+            <Image Source="dinero" WidthRequest="80" Margin="0,0,0,30"></Image>
+            <Label Text=" Vas a transferir:" Margin="5" HorizontalOptions="Center" FontSize="13" TextColor="#542B21" FontFamily="{StaticResource Hack-Regular}"/>
+            <Label x:Name="dinero" FontAttributes="Bold" TextColor="Black" Margin="5" HorizontalOptions="Center" FontSize="14"/>
+            <Label Text="Cuenta del beneficiario:" Margin="5" HorizontalOptions="CenterAndExpand" FontSize="13" TextColor="#542B21" FontFamily="{StaticResource Hack-Regular}"/>
+            <Label x:Name="origenCuenta"  FontAttributes="Bold" TextColor="Black" Margin="5" HorizontalOptions="CenterAndExpand" FontSize="14"/>
+            <Label Text="Cuenta de origen:" Margin="5" HorizontalOptions="CenterAndExpand" FontSize="13" TextColor="#542B21" FontFamily="{StaticResource Hack-Regular}"/>
+            <Label x:Name="destinoCuenta" FontAttributes="Bold" TextColor="Black" Margin="5" HorizontalOptions="CenterAndExpand" FontSize="14"/>
+            <Label Text="Banco de destino (Nombre Banco)" Margin="5" HorizontalOptions="CenterAndExpand" FontSize="13" TextColor="#542B21" FontFamily="{StaticResource Hack-Regular}"/>
+            
+            <Button x:Name="btnConfirmarTransferencia" Clicked="btnConfirmarTransferencia_Clicked"  Margin="70,50" Text="Confirmar Transferencia" 
+                    BackgroundColor="#FFCB69" TextColor="#1D4E89" FontSize="13" CornerRadius="15" TextTransform="None" FontFamily="{StaticResource Hack-Bold}"/>
+            <Button x:Name="btnCancelar" Clicked="btnCancelar_Clicked" Margin="70,-40" Text="Cancelar" 
+                    BackgroundColor="#E8F3FF" TextColor="#1D4E89"   
+                            FontSize="13" CornerRadius="15" TextTransform="None" FontFamily="{StaticResource Hack-Bold}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

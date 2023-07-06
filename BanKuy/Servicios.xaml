@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.Servicios"
+              NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="flecha" x:Name="btnRegresar" HeightRequest="20" HorizontalOptions="Start" BackgroundColor="White" Margin="20"/>
+                <Image x:Name="icono" Source="logoBank"  WidthRequest="190" HorizontalOptions="CenterAndExpand" Margin="-80,20,0,0"/>
+            </StackLayout>
+
+            <Label Text="Servicios Básicos" TextColor="#1D4E89" FontSize="25" Margin="10" HorizontalTextAlignment="Center" FontFamily="{StaticResource BodoniXT}"/>
+            <Label Text="Escoja la categoría que desea pagar: " TextColor="#542B21" Margin="20" FontSize="14" FontFamily="{StaticResource Hack-Regular}"/>
+
+            <Button x:Name="btnAgua" Clicked="btnAgua_Clicked" Text="Agua Potable" HeightRequest="50" BackgroundColor="#FFCB69" TextTransform="None"
+                        TextColor="#1D4E89 " FontFamily="{StaticResource Hack-Bold}" CornerRadius="10" Margin="100,10" FontSize="13"/>
+            <Button x:Name="btnLuz" Clicked="btnLuz_Clicked" Text="Electricidad - Luz" HeightRequest="50" BackgroundColor="#FFCB69" TextTransform="None"
+                        TextColor="#1D4E89 " FontFamily="{StaticResource Hack-Bold}" CornerRadius="10" Margin="100,10" FontSize="13"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

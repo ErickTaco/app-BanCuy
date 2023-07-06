@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BanKuy.TransferenciaInterbancaria" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="flecha" x:Name="btnRegresar" HeightRequest="20" HorizontalOptions="Start" BackgroundColor="White" Margin="20"/>
+                <Image x:Name="icono" Source="logoBank"  WidthRequest="190" HorizontalOptions="CenterAndExpand" Margin="-80,20,0,0"/>
+            </StackLayout>
+
+            <Label Text="Tranferencia Interbancaria" TextColor="#1D4E89" FontSize="25" Margin="10" HorizontalTextAlignment="Center" FontFamily="{StaticResource BodoniXT}"/>
+
+            <Label Text="Selecciona el Banco de destino: " TextColor="#542B21" Margin="20" FontSize="14" FontFamily="{StaticResource Hack-Regular}"/>
+            <Button x:Name="btnPichincha"  Text="Banco Pichincha" Clicked="btnPichincha_Clicked" HeightRequest="50" BackgroundColor="#FFCB69" TextTransform="None"
+                        TextColor="#1D4E89 " FontFamily="{StaticResource Hack-Bold}" CornerRadius="10" Margin="90,10" FontSize="13" />
+            <Button x:Name="btnGuayaquil"  Text="Banco Guayaquil" Clicked="btnGuayaquil_Clicked" HeightRequest="50" BackgroundColor="#FFCB69" TextTransform="None"
+                        TextColor="#1D4E89 " FontFamily="{StaticResource Hack-Bold}" CornerRadius="10" Margin="90,10" FontSize="13"/>
+            <Button x:Name="btnPacifico"  Text="Banco del Pacífico" Clicked="btnPacifico_Clicked" HeightRequest="50" BackgroundColor="#FFCB69" TextTransform="None"
+                        TextColor="#1D4E89 " FontFamily="{StaticResource Hack-Bold}" CornerRadius="10" Margin="90,10" FontSize="13"/>
+            <Button x:Name="btnAustro" Text="Banco del Austro" Clicked="btnAustro_Clicked" HeightRequest="50" BackgroundColor="#FFCB69" TextTransform="None"
+                        TextColor="#1D4E89 " FontFamily="{StaticResource Hack-Bold}" CornerRadius="10" Margin="90,10" FontSize="13"/>
+            <Button x:Name="btnProdubanco" Text="Produbanco" Clicked="btnProdubanco_Clicked" HeightRequest="50" BackgroundColor="#FFCB69" TextTransform="None"
+                        TextColor="#1D4E89 " FontFamily="{StaticResource Hack-Bold}" CornerRadius="10" Margin="90,10" FontSize="13"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
